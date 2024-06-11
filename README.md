@@ -53,6 +53,22 @@ If this does not throw any exception, everything seems to be fine, and you can e
 >>> exit()
 ```
 
+#### Troubleshooting
+
+If `import cv2` throws an exception that reads something like
+
+```
+ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+```
+
+then
+
+```
+apt-get install libgl1
+```
+
+might solve the problem (see also [here](https://stackoverflow.com/a/74501248)).
+
 ### 4. Install GPU-Version of PyTorch [optional, untested]
 
 If you have an NVIDIA- or AMD GPU, you can install the GPU-version of PyTorch. To check for an NVIDIA GPU, execute
