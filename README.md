@@ -6,7 +6,7 @@ Code-files (Jupyter notebooks) and data will be added to this repository in due 
 
 ## Software Setup
 
-**Note**: The easiest way is to set up the software locally, on the very laptop you are going to use during the workshop. We will not need lots of computing resources, only approx. 1 GB of memory and a medium-strength CPU with >= 8 GB of RAM.
+**Note**: The easiest way is to set up the software locally, on the very laptop you are going to use during the workshop. We will not need lots of computing resources, only approx. 4 GB of memory and a medium-strength CPU with >= 8 GB of RAM.
 
 ### 1. Clone this Repository
 
@@ -28,7 +28,7 @@ Open a terminal window and `cd` to the directory containing the local clone of t
 $ conda env create --file environment.yml
 ```
 
-After a few seconds, you might be asked to confirm creating a new environment and downloading a couple of packages amounting to approx. 1 GB. If so, please confirm and wait until all packages are downloaded and installed (this may take a few minutes). Then, execute
+After a few seconds, you might be asked to confirm creating a new environment and downloading a couple of packages amounting to approx. 4 GB. If so, please confirm and wait until all packages are downloaded and installed (this may take a few minutes). Then, execute
 
 ```
 $ conda activate dl_cv_workshop
