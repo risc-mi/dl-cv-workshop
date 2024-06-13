@@ -14,7 +14,15 @@ Clone or download this repository to your computer.
 
 ### 2. Download and Install Miniconda
 
-Make sure [Miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/) is installed on your system. It is available for all major operating systems, including Windows, MacOS, and Linux.
+Make sure [Miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/) is installed on your system. You can check if it is already installed with
+
+```
+$ conda -V
+```
+
+If the above command succeeds and prints a relatively recent version number (around 24.5.0), you can jump to Step 3.
+
+Otherwise, install Miniconda using the above link. It is available for all major operating systems, including Windows, MacOS, and Linux.
 
 Miniconda provides a minimal Python installation with an integrated package manager, and allows to easily create and manage dedicated Python environments.
 
@@ -28,7 +36,7 @@ Open a terminal window and `cd` to the directory containing the local clone of t
 $ conda env create --file environment.yml
 ```
 
-After a few seconds, you might be asked to confirm creating a new environment and downloading a couple of packages amounting to approx. 4 GB. If so, please confirm and wait until all packages are downloaded and installed (this may take a few minutes). Then, execute
+After a few seconds, you might be asked to confirm creating a new environment and downloading a couple of packages amounting to approx. 4 GB. If so, please confirm and wait until all packages are downloaded and installed. Depending on your computing environment, this may take a few minutes to a few hours - please be patient. Then, execute
 
 ```
 $ conda activate dl_cv_workshop
@@ -85,7 +93,7 @@ $ conda install pytorch pytorch-cuda=<YOUR CUDA VERSION> -c pytorch -c nvidia
 
 Check the [official installation instructions](https://pytorch.org/get-started/locally/) if anything goes wrong or you have an AMD GPU.
 
-**Note**: A GPU is not required for the workshop, but can significantly speed up computations, in particular, model training.
+**Note**: A GPU is *not* required for the workshop, but can significantly speed up computations, in particular, model training.
 
 ## Contact
 
