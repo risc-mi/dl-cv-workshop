@@ -6,11 +6,15 @@ Code-files (Jupyter notebooks) and data will be added to this repository in due 
 
 ## Software Setup
 
-**Note**: The easiest way is to set up the software locally, on the very laptop you are going to use during the workshop. We will not need lots of computing resources, only approx. 4 GB of memory and a medium-strength CPU with >= 8 GB of RAM.
+**Note**: The easiest way is to set up the software locally, on the very laptop you are going to use during the workshop. We will not need lots of computing resources, only approx. 4 GB of disk space and a medium-strength CPU with >= 8 GB of RAM.
 
 ### 1. Clone this Repository
 
-Clone or download this repository to your computer.
+Clone or download this repository to your computer:
+
+```
+$ git clone https://github.com/risc-mi/dl-cv-workshop.git
+```
 
 ### 2. Download and Install Miniconda
 
