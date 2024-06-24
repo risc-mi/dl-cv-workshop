@@ -2,8 +2,6 @@
 
 This repository accompanies the workshop *Introduction to Deep Learning: Hands-on Workshop in Computer Vision*. See below for detailed instructions on setting up the necessary software on your computer.
 
-Code-files (Jupyter notebooks) and data will be added to this repository in due course.
-
 ## Software Setup
 
 **Note**: The easiest way is to set up the software locally, on the very laptop you are going to use during the workshop. We will not need lots of computing resources, only approx. 4 GB of disk space and a medium-strength CPU with >= 8 GB of RAM.
