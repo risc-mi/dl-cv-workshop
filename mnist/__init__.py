@@ -49,13 +49,14 @@ class Canvas:
             self.pressed = True
             self.xs = [event.xdata]
             self.ys = [event.ydata]
-            self.lines.append(self.ax.plot(self.xs, self.ys, c='k', lw=30)[0])
+            self.lines.append(self.ax.plot(self.xs, self.ys, c='k', lw=20)[0])
             self.fig.canvas.draw()
 
     def on_release(self, event):
         self.pressed = False
         x = self.get_image().reshape(1, 1, 28, 28)
-        with torch.no_grad():
+        self.model.eval()
+        with torch.inference_mode():
             y = torch.argmax(self.model(torch.tensor(x))[0]).cpu().numpy()
         self.ax.set_title('Predicted: ' + str(y))
 
