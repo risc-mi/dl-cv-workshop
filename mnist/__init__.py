@@ -72,9 +72,14 @@ class Canvas:
         self.fig.canvas.mpl_disconnect(self.cidmotion)
         self.fig.canvas.mpl_disconnect(self.cidaxleave)
         self.fig.canvas.mpl_disconnect(self.cidfigleave)
+    
+    def get_pillow(self) -> Image.Image:
+        # don't use `fig.canvas.get_width_height()`
+        size = (self.fig.get_size_inches() * self.fig.dpi).astype(np.int32)
+        return Image.frombytes('RGBA', (size[0], size[1]), self.fig.canvas.buffer_rgba())
 
     def get_image(self) -> np.ndarray:
-        img = Image.frombytes('RGBA', self.fig.canvas.get_width_height(), self.fig.canvas.buffer_rgba())
+        img = self.get_pillow()
         w, h = img.size
         x = np.asarray(resize(img.crop((w // 23, h // 10, w - w // 25, h - h // 25)), s=28))[:, :, :3].mean(axis=2)
         return 1. - x.astype(np.float32) / 255.
